@@ -6,7 +6,7 @@ $(function() {
         crossDomain: true,
         //jsonp: "json_callback",
         dataType:"json",
-        headers:{"Access-Control-Allow-Origin":"api.smitegame.com"}
+        headers:{"Access-Control-Allow-Origin":"nickrenfo2.github.io"}
     }).done(function(response){
         signature = response.session_id;
         console.log(signature);
