@@ -5,7 +5,7 @@ $(function() {
         url:getQueryURL("createsession"),
         crossDomain: true,
         json: "json_callback",
-        dataType:"json"
+        dataType:"jsonp"
     }).done(function(response){
         signature = response.session_id;
         console.log(signature);
