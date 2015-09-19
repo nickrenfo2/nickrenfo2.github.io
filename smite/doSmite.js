@@ -4,8 +4,9 @@ $(function() {
     $.ajax({
         url:getQueryURL("createsession"),
         crossDomain: true,
-        json: "json_callback",
-        dataType:"jsonp"
+        jsonp: "json_callback",
+        dataType:"jsonp",
+        headers:{"Access-Control-Allow-Origin":"api.smitegame.com"}
     }).done(function(response){
         signature = response.session_id;
         console.log(signature);
