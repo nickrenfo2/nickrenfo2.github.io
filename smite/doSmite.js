@@ -2,7 +2,10 @@ $(function() {
     var urlFormat = "http://api.smitegame.com/smiteapi.svc";
     var signature;
     $.ajax({
-        url:getQueryURL("createsession")
+        url:getQueryURL("createsession"),
+        crossDomain: true,
+        json: "json_callback",
+        dataType:"json"
     }).done(function(response){
         signature = response.session_id;
         console.log(signature);
